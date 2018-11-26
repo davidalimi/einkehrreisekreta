@@ -16,7 +16,7 @@
 
 			--dark-header: #000000;
 
-			--max-width: 1400px;
+			--max-width: 1600px;
 
 		}
 
@@ -121,7 +121,6 @@
 
 		nav .menu-list {
 			grid-area:menu-list;
-
 			display: none;
 		}
 
@@ -136,8 +135,12 @@
 			list-style-type: none;
 		}
 
+		nav .menu-list li:hover{
+			border-bottom: 1px solid var(--dark-text);
+		}
 		nav .menu-list li{
 			padding: 10px;
+			border-bottom: 1px solid var(--light-bg);;
 		}
 
 		nav .menu-list a{
@@ -169,6 +172,7 @@
 			padding-bottom: 64px;
 			margin: 0 auto;
 			width: 100%;
+			min-height: 20vh;
 		}
 
 		#hero{
@@ -180,34 +184,45 @@
 			height: 720px;
 		}
 
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 		/*Home*/
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 		#home {
 			background-color: var(--verylight-bg);
-			color: var(--verydark-text);
+			color: var(--dark-text);
 			min-height: 20vh;
-
 		}
 
 		#home .page{
 			display: grid;
+			grid-template:
+				"heading"
+				"presentation"
+				/ 1fr;
+			
+			grid-row-gap:1em;
+			justify-items:center;
+		}
+
+		#home .heading {grid-area:heading;}
+
+		#home .presentation{
+			grid-area:presentation;
+			display: grid;
 			padding: 0 20px;
 		}
 
-		/*Home*/
-		#carousel {
-			background-color: var(--verylight-bg);
-			color: var(--verydark-text);
+		#home strong{
+			font-size: 150%;
+			color:lightblue;
 		}
 
-		#carousel .page{
-		}
-
-
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 		/*Concept*/
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 		#concept {
 			background-color: var(--light-bg);
 			color: var(--verydark-text);
-			
 		}
 
 		#concept .box h2{
@@ -260,45 +275,47 @@
 			justify-self:center;
 		}
 
-		/*impression*/
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+		/*program*/
+		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-		#impression {
-			background-color: var(--verydark-bg);
-			color: var(--verylight-text);
+		#program {
+			background-color: var(--dark-bg);
+			color: var(--light-text);
 			justify-items:center;
 		}
 
-		#impression .page {
+		#program .page {
 			display: grid;
 			grid-template:
 				"heading"
 				"slider"
 				/ 1fr;
 		}
-		#impression .heading {grid-area:heading;}
-		#impression .helga {grid-area:helga;}
+		#program .heading {grid-area:heading;}
+		#program .slider {grid-area:slider;}
 
-		#impression .wrapper {
+		#program .wrapper {
 			grid-area:slider;
 			margin: 1em auto;
 			position: relative;
 		}
-		#impression input {
+		#program input {
 			display: none;
 		}
-		#impression .inner {
+		#program .inner {
 			width: 500%;
 			line-height: 0;
 		}
-		#impression article {
+		#program article {
 			width: 20%;
 			float: left;
 			position: relative;
 		}
-		#impression article img {
+		#program article img {
 			width: 100%;
 		}
-		#impression .slider-prev-next-control {
+		#program .slider-prev-next-control {
 			height: 50px;
 			position: absolute;
 			top: 50%;
@@ -309,7 +326,7 @@
 			-o-transform: translateY(-50%);
 			transform: translateY(-50%);
 		}
-		#impression .slider-prev-next-control label {
+		#program .slider-prev-next-control label {
 			display: none;
 			width: 40px;
 			height: 40px;
@@ -317,16 +334,16 @@
 			background: #fff;
 			opacity: 0.7;
 		}
-		#impression .slider-prev-next-control label:hover {
+		#program .slider-prev-next-control label:hover {
 			opacity: 1;
 		}
-		#impression .slider-dot-control {
+		#program .slider-dot-control {
 			position: absolute;
 			width: 100%;
 			bottom: 0;
 			text-align: center;
 		}
-		#impression .slider-dot-control label {
+		#program .slider-dot-control label {
 			cursor: pointer;
 			border-radius: 5px;
 			display: inline-block;
@@ -337,11 +354,11 @@
 			-moz-transition: all 0.3s;
 			transition: all 0.3s;
 		}
-		#impression .slider-dot-control label:hover {
+		#program .slider-dot-control label:hover {
 			background: #ccc;
 			border-color: #777;
 		}
-		#impression .info {
+		#program .info {
 			position: absolute;
 			font-style: italic;
 			line-height: 20px;
@@ -352,30 +369,30 @@
 			-moz-transition: all 1000ms ease-out 600ms;
 			transition: all 1000ms ease-out 600ms;
 		}
-		#impression .info h3 {
+		#program .info h3 {
 			color: #fcfff4;
 			margin: 0 0 5px;
 			font-weight: normal;
 			font-size: 1.5em;
 			font-style: normal;
 		}
-		#impression .info.top-left {
+		#program .info.top-left {
 			top: 30px;
 			left: 30px;
 		}
-		#impression .info.top-right {
+		#program .info.top-right {
 			top: 30px;
 			right: 30px;
 		}
-		#impression .info.bottom-left {
+		#program .info.bottom-left {
 			bottom: 30px;
 			left: 30px;
 		}
-		#impression .info.bottom-right {
+		#program .info.bottom-right {
 			bottom: 30px;
 			right: 30px;
 		}
-		#impression .slider-wrapper {
+		#program .slider-wrapper {
 			width: 75%;
 			margin: 0 auto;
 			overflow: hidden;
@@ -392,7 +409,7 @@
 			-moz-transition: all 500ms ease-out;
 			transition: all 500ms ease-out;
 		}
-		#impression .slider-wrapper .inner {
+		#program .slider-wrapper .inner {
 			-webkit-transform: translateZ(0);
 			-moz-transform: translateZ(0);
 			-ms-transform: translateZ(0);
@@ -402,7 +419,7 @@
 			-moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 			transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 		}
-		#impression #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after, #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
+		#program #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after, #program #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
@@ -413,60 +430,60 @@
 			display: block;
 			color: #777;
 		}
-		#impression #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after {
+		#program #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after {
 			content: "\f105";
 			padding-left: 15px;
 		}
-		#impression #slide1:checked ~ .slider-prev-next-control label:nth-child(2), #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(3), #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(4), #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(5), #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(1) {
+		#program #slide1:checked ~ .slider-prev-next-control label:nth-child(2), #program #slide2:checked ~ .slider-prev-next-control label:nth-child(3), #program #slide3:checked ~ .slider-prev-next-control label:nth-child(4), #program #slide4:checked ~ .slider-prev-next-control label:nth-child(5), #program #slide5:checked ~ .slider-prev-next-control label:nth-child(1) {
 			display: block;
 			float: right;
 			margin-right: 5px;
 		}
-		#impression #slide2:checked ~ .slider-prev-next-control label:nth-child(1), #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(2), #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(3), #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(4), #impression #slide1:checked ~ .slider-prev-next-control label:nth-child(5) {
+		#program #slide2:checked ~ .slider-prev-next-control label:nth-child(1), #program #slide3:checked ~ .slider-prev-next-control label:nth-child(2), #program #slide4:checked ~ .slider-prev-next-control label:nth-child(3), #program #slide5:checked ~ .slider-prev-next-control label:nth-child(4), #program #slide1:checked ~ .slider-prev-next-control label:nth-child(5) {
 			display: block;
 			float: left;
 			margin-left: 5px;
 		}
-		#impression #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
+		#program #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
 			content: "\f104";
 			padding-left: 8px;
 		}
-		#impression #slide1:checked ~ .slider-dot-control label:nth-child(1), #impression #slide2:checked ~ .slider-dot-control label:nth-child(2), #impression #slide3:checked ~ .slider-dot-control label:nth-child(3), #impression #slide4:checked ~ .slider-dot-control label:nth-child(4), #impression #slide5:checked ~ .slider-dot-control label:nth-child(5) {
+		#program #slide1:checked ~ .slider-dot-control label:nth-child(1), #program #slide2:checked ~ .slider-dot-control label:nth-child(2), #program #slide3:checked ~ .slider-dot-control label:nth-child(3), #program #slide4:checked ~ .slider-dot-control label:nth-child(4), #program #slide5:checked ~ .slider-dot-control label:nth-child(5) {
 			background: #333;
 		}
-		#impression #slide1:checked ~ .slider-wrapper article:nth-child(1) .info, #impression #slide2:checked ~ .slider-wrapper article:nth-child(2) .info, #impression #slide3:checked ~ .slider-wrapper article:nth-child(3) .info, #impression #slide4:checked ~ .slider-wrapper article:nth-child(4) .info, #impression #slide5:checked ~ .slider-wrapper article:nth-child(5) .info {
+		#program #slide1:checked ~ .slider-wrapper article:nth-child(1) .info, #program #slide2:checked ~ .slider-wrapper article:nth-child(2) .info, #program #slide3:checked ~ .slider-wrapper article:nth-child(3) .info, #program #slide4:checked ~ .slider-wrapper article:nth-child(4) .info, #program #slide5:checked ~ .slider-wrapper article:nth-child(5) .info {
 			opacity: 1;
 		}
-		#impression #slide1:checked ~ .slider-wrapper .inner {
+		#program #slide1:checked ~ .slider-wrapper .inner {
 			margin-left: 0%;
 		}
-		#impression #slide2:checked ~ .slider-wrapper .inner {
+		#program #slide2:checked ~ .slider-wrapper .inner {
 			margin-left: -100%;
 		}
-		#impression #slide3:checked ~ .slider-wrapper .inner {
+		#program #slide3:checked ~ .slider-wrapper .inner {
 			margin-left: -200%;
 		}
-		#impression #slide4:checked ~ .slider-wrapper .inner {
+		#program #slide4:checked ~ .slider-wrapper .inner {
 			margin-left: -300%;
 		}
-		#impression #slide5:checked ~ .slider-wrapper .inner {
+		#program #slide5:checked ~ .slider-wrapper .inner {
 			margin-left: -400%;
 		}
 		@media only screen and (max-width: 850px) and (min-width: 450px) {
-			#impression .slider-wrapper {
+			#program .slider-wrapper {
 				border-radius: 0;
 			}
 		}
 		@media only screen and (max-width: 450px) {
-			#impression .slider-wrapper {
+			#program .slider-wrapper {
 				border-radius: 0;
 			}
-			#impression .slider-wrapper .info {
+			#program .slider-wrapper .info {
 				opacity: 0;
 			}
 		}
 		@media only screen and (min-width: 850px) {
-			#impression body {
+			#program body {
 				padding: 0 80px;
 			}
 		}
@@ -517,8 +534,8 @@
 		/*Price*/
 
 		#price{
-			background-color: var(--verydark-bg);
-			color: var(--verylight-text);
+			background-color: var(--light-bg);
+			color: var(--dark-text);
 			justify-items:center;
 		}
 		#price .page{
@@ -537,54 +554,133 @@
 		#contact{
 			background-color: var(--dark-bg);
 			color: var(--verylight-text);
-			justify-items:center;
+			
 		}
 		#contact .page{
 			display: grid;
 			grid-template:
 				"heading"
-				"bureau" 
-				"phone" 
-				"email"
-				"sn"
-				/ 1fr;  
+				"info"
+				"panel"
+				/ 1fr; 
+			justify-items:center;
 		}
 
 		#contact .heading {grid-area:heading;}
-		#contact .bureau {grid-area:bureau;}
-		#contact .email {grid-area:email;}
-		#contact .sn {grid-area:sn;}
+
+		#contact .info {	
+			grid-area:info;
+			display: grid;
+			grid-template:
+				"phone"
+				"email"
+				/ 1fr; 
+			width: 100%;
+			justify-items:center;
+		}
+
+		#contact .info .bureau {grid-area:bureau;}
+		#contact .info .email {grid-area:email;}
+
+		#contact .panel {
+			grid-area:panel;
+			width: 90%;
+			margin: 0;
+			justify-items:center;
+		}
+
+		#contact .form {
+
+			background: var(--dark-bg);
+			display: grid;
+			grid-template:
+				"name"
+				"email"
+				"message"
+				"button"
+				/ 1fr; 
+
+			position: relative;
+			padding:5px;
+
+			justify-items:center;
+
+		}
+
+		#contact .form .name {grid-area:name;}
+		#contact .form .email {grid-area:email;}
+		#contact .form .message {grid-area:message;}
+		#contact .form .button {grid-area:button; justify-self: end;}
+
+		#contact .form textarea {
+			height: 150px;
+		}
+
+		#contact .form .field {
+			border: none;
+			border-bottom: solid 1px var(--verylight-text);
+			background: transparent;
+			color: var(--verylight-text);
+			font-size: 120%;
+			min-height: 30px;
+			width: 90%;
+			padding: 15px;
+		}
+
+		#contact .form button {
+
+			border: none;
+			margin-top: 25px;
+			font-size: 120%;
+			background: transparent;
+			color:var(--light-text);
+			
+		}
+
+		#contact .form button:hover {
+
+			color:var(--verylight-text);
+			
+		}
+
+		#contact .form button:clear {
+
+			color: green;
+			
+		}
 
 		#contact .box{
 			padding: 10px;
-			justify-items:center;
-			vertical-align: text-top;
 			text-align: center;
+			display: grid;
+		}
+		#contact .box i{ 
+			align-self: end;
+
+		}
+		#contact .box p{ 
+			align-self: start;
+
 		}
 		
-		#contact .sn a {
-			margin: 10px;
-			text-decoration: none;
-		}
-
-		/*** Header Styles ***/
 		footer{
-			background: var(--dark-bg);
-			color: var(--verylight-text);
+			background: var(--verydark-bg);
+			color: var(--light-text);
 			text-align: center;
 			padding: 20px;
+			min-height: 30px;
 		}
 
 		/* Small devices*/
 		@media only screen and (min-width: 576px) {
 
-			#impression .box ul{
+			#program .box ul{
 				border-radius: 5px;
 			}
-			#impression .content ul li:first-child {
+			#program .content ul li:first-child {
 				border-radius: 5px 5px 0px 0px;
 			}
-			#impression .content ul li:last-child {
+			#program .content ul li:last-child {
 				border-radius: 0px 0px 5px 5px;
 			}
 
@@ -637,25 +733,13 @@
 			}
 
 			
-			#impression {
-/*        grid-template:
-					"heading heading" auto
-					"quote quote" auto
-					"p1 p1" auto
-					"p2 p3" auto
-					"p4 p5" auto
-					"p6 p7" auto
-					/ 1fr 1fr;*/
+			#program {
 				grid-template:
 					"slider" auto
 					/ 1fr;
 			}
 
-/*      #impression .box{
-				margin: 0px 20px;
-				padding:0px;
-			}
-*/
+			
 			#team .page{
 				grid-template:
 					"heading heading"
@@ -668,12 +752,30 @@
 				padding:20px;
 			}
 
-			#contact .page{
+			#contact .page {	
 				grid-template:
-					"heading heading heading"
-					"bureau phone email"
-					"sn sn sn"
-					/ 1fr 1fr 1fr;
+					"heading heading"
+					"info panel"
+					/ 1fr 1fr;
+			}
+
+			#contact .info {	
+				grid-area:info;
+				display: grid;
+				grid-template:
+					"phone"
+					"email"	
+					/ 1fr; 
+			}
+
+			#contact .form .field {
+				height: 30px;
+				margin: 10px;
+				max-width: 300px;
+			}
+
+			#contact .form .message {
+				height: 150px;
 			}
 
 		}
@@ -692,6 +794,10 @@
 					"c4 c5 ."
 					/ 1fr 1fr 1fr;
 			}
+
+			#contact .form .field {
+				max-width: 500px;
+			}
 		
 		}
 
@@ -702,6 +808,7 @@
 				grid-template-columns: repeat(3,1fr) ;
 			}
 */
+}
 
 /*Cookie Consent Begin*/
 #cookieConsent {
