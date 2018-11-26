@@ -1,0 +1,41 @@
+h1,h2,h3,h4,h5,h6,p{
+	color: #3a3a3a;
+	font-weight: 700;
+	margin-bottom: 20px;
+	font-family: Montserrat, sans-serif;
+}
+
+body{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.6em;
+	background-image: linear-gradient(180deg, #eeeeee, #FFFFFF);
+}
+
+ul li{
+	text-align: left;
+}
+
+/*section {
+	margin-left : 3em;
+	margin-right: 3em;
+	padding: 3em;
+}*/
+
+.theme-main{
+	color:grey;
+}
+
+.active{
+	border-bottom: 2px solid grey;
+}
+
+
+.program-head{
+	border: 0px solid;
+}
+
+#imgtop {
+	width:100%;
+}
