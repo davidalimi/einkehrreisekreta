@@ -30,7 +30,7 @@
 			padding: 0;
 			max-width: var(--max-width);
 			margin: 0 auto;
-			background-image: url("https://www.laquabrother.com/wp-content/uploads/2016/02/white-paper-background-cardboard-texture-hd1.jpg");
+			background-image: url("image/backgrounf.jpg");
 			background-size: cover;
 			background-position: 50% 50%;
 			background-attachment: fixed;
@@ -64,7 +64,7 @@
 
 			display: grid;
 			grid-template: 
-			"logo mark menu-toggle" 64px
+			"mark menu-toggle" 64px
 			"menu-list menu-list menu-list" 1fr
 			/ 64px auto 64px;
 
@@ -621,7 +621,7 @@
 
 			nav {
 				grid-template: 
-					"logo mark menu-list" 64px
+					"mark menu-list" 64px
 					/ 64px 200px auto;
 			}
 
