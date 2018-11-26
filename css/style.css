@@ -1,7 +1,7 @@
 :root {
 
-			--verydark-bg: #444444;
-			--dark-bg: #3b3b3b;
+			--verydark-bg: #3b3b3b;
+			--dark-bg: #444444;
 			--light-bg: #eeeeee;
 			--verylight-bg: #ffffff;
 
@@ -30,7 +30,7 @@
 			padding: 0;
 			max-width: var(--max-width);
 			margin: 0 auto;
-			background-image: url("image/backgrounf.jpg");
+			background-image: url("../image/background.jpg");
 			background-size: cover;
 			background-position: 50% 50%;
 			background-attachment: fixed;
@@ -48,6 +48,23 @@
 
 		}
 		a { color: inherit; } 
+
+		blockquote {
+			font-size: 18px;
+			font-family: 'Dancing Script', serif;
+			padding: 8px;
+			margin: 5px;
+			background-image: url("../image/openquote.gif");
+			background-position: top left;
+			background-repeat: no-repeat;
+			text-indent: 25px;
+			}
+			blockquote span {
+				display: block;
+				background-image: url("../image/closequote.gif");
+				background-repeat: no-repeat;
+				background-position: bottom right;
+			}
 
 		/*** Navigation Styles ***/
 		nav{
@@ -243,45 +260,45 @@
 			justify-self:center;
 		}
 
-		/*Program*/
+		/*impression*/
 
-		#program {
+		#impression {
 			background-color: var(--verydark-bg);
 			color: var(--verylight-text);
 			justify-items:center;
 		}
 
-		#program .page {
+		#impression .page {
 			display: grid;
 			grid-template:
 				"heading"
 				"slider"
 				/ 1fr;
 		}
-		#program .heading {grid-area:heading;}
-		#program .helga {grid-area:helga;}
+		#impression .heading {grid-area:heading;}
+		#impression .helga {grid-area:helga;}
 
-		#program .wrapper {
+		#impression .wrapper {
 			grid-area:slider;
 			margin: 1em auto;
 			position: relative;
 		}
-		#program input {
+		#impression input {
 			display: none;
 		}
-		#program .inner {
+		#impression .inner {
 			width: 500%;
 			line-height: 0;
 		}
-		#program article {
+		#impression article {
 			width: 20%;
 			float: left;
 			position: relative;
 		}
-		#program article img {
+		#impression article img {
 			width: 100%;
 		}
-		#program .slider-prev-next-control {
+		#impression .slider-prev-next-control {
 			height: 50px;
 			position: absolute;
 			top: 50%;
@@ -292,7 +309,7 @@
 			-o-transform: translateY(-50%);
 			transform: translateY(-50%);
 		}
-		#program .slider-prev-next-control label {
+		#impression .slider-prev-next-control label {
 			display: none;
 			width: 40px;
 			height: 40px;
@@ -300,16 +317,16 @@
 			background: #fff;
 			opacity: 0.7;
 		}
-		#program .slider-prev-next-control label:hover {
+		#impression .slider-prev-next-control label:hover {
 			opacity: 1;
 		}
-		#program .slider-dot-control {
+		#impression .slider-dot-control {
 			position: absolute;
 			width: 100%;
 			bottom: 0;
 			text-align: center;
 		}
-		#program .slider-dot-control label {
+		#impression .slider-dot-control label {
 			cursor: pointer;
 			border-radius: 5px;
 			display: inline-block;
@@ -320,11 +337,11 @@
 			-moz-transition: all 0.3s;
 			transition: all 0.3s;
 		}
-		#program .slider-dot-control label:hover {
+		#impression .slider-dot-control label:hover {
 			background: #ccc;
 			border-color: #777;
 		}
-		#program .info {
+		#impression .info {
 			position: absolute;
 			font-style: italic;
 			line-height: 20px;
@@ -335,30 +352,30 @@
 			-moz-transition: all 1000ms ease-out 600ms;
 			transition: all 1000ms ease-out 600ms;
 		}
-		#program .info h3 {
+		#impression .info h3 {
 			color: #fcfff4;
 			margin: 0 0 5px;
 			font-weight: normal;
 			font-size: 1.5em;
 			font-style: normal;
 		}
-		#program .info.top-left {
+		#impression .info.top-left {
 			top: 30px;
 			left: 30px;
 		}
-		#program .info.top-right {
+		#impression .info.top-right {
 			top: 30px;
 			right: 30px;
 		}
-		#program .info.bottom-left {
+		#impression .info.bottom-left {
 			bottom: 30px;
 			left: 30px;
 		}
-		#program .info.bottom-right {
+		#impression .info.bottom-right {
 			bottom: 30px;
 			right: 30px;
 		}
-		#program .slider-wrapper {
+		#impression .slider-wrapper {
 			width: 75%;
 			margin: 0 auto;
 			overflow: hidden;
@@ -375,7 +392,7 @@
 			-moz-transition: all 500ms ease-out;
 			transition: all 500ms ease-out;
 		}
-		#program .slider-wrapper .inner {
+		#impression .slider-wrapper .inner {
 			-webkit-transform: translateZ(0);
 			-moz-transform: translateZ(0);
 			-ms-transform: translateZ(0);
@@ -385,7 +402,7 @@
 			-moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 			transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
 		}
-		#program #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after, #program #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
+		#impression #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after, #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
 			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
@@ -396,119 +413,63 @@
 			display: block;
 			color: #777;
 		}
-		#program #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after {
+		#impression #slide1:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(5)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(1)::after {
 			content: "\f105";
 			padding-left: 15px;
 		}
-		#program #slide1:checked ~ .slider-prev-next-control label:nth-child(2), #program #slide2:checked ~ .slider-prev-next-control label:nth-child(3), #program #slide3:checked ~ .slider-prev-next-control label:nth-child(4), #program #slide4:checked ~ .slider-prev-next-control label:nth-child(5), #program #slide5:checked ~ .slider-prev-next-control label:nth-child(1) {
+		#impression #slide1:checked ~ .slider-prev-next-control label:nth-child(2), #impression #slide2:checked ~ .slider-prev-next-control label:nth-child(3), #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(4), #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(5), #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(1) {
 			display: block;
 			float: right;
 			margin-right: 5px;
 		}
-		#program #slide2:checked ~ .slider-prev-next-control label:nth-child(1), #program #slide3:checked ~ .slider-prev-next-control label:nth-child(2), #program #slide4:checked ~ .slider-prev-next-control label:nth-child(3), #program #slide5:checked ~ .slider-prev-next-control label:nth-child(4), #program #slide1:checked ~ .slider-prev-next-control label:nth-child(5) {
+		#impression #slide2:checked ~ .slider-prev-next-control label:nth-child(1), #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(2), #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(3), #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(4), #impression #slide1:checked ~ .slider-prev-next-control label:nth-child(5) {
 			display: block;
 			float: left;
 			margin-left: 5px;
 		}
-		#program #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #program #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #program #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #program #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #program #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
+		#impression #slide2:checked ~ .slider-prev-next-control label:nth-child(1)::after, #impression #slide3:checked ~ .slider-prev-next-control label:nth-child(2)::after, #impression #slide4:checked ~ .slider-prev-next-control label:nth-child(3)::after, #impression #slide5:checked ~ .slider-prev-next-control label:nth-child(4)::after, #impression #slide1:checked ~ .slider-prev-next-control label:nth-child(5)::after {
 			content: "\f104";
 			padding-left: 8px;
 		}
-		#program #slide1:checked ~ .slider-dot-control label:nth-child(1), #program #slide2:checked ~ .slider-dot-control label:nth-child(2), #program #slide3:checked ~ .slider-dot-control label:nth-child(3), #program #slide4:checked ~ .slider-dot-control label:nth-child(4), #program #slide5:checked ~ .slider-dot-control label:nth-child(5) {
+		#impression #slide1:checked ~ .slider-dot-control label:nth-child(1), #impression #slide2:checked ~ .slider-dot-control label:nth-child(2), #impression #slide3:checked ~ .slider-dot-control label:nth-child(3), #impression #slide4:checked ~ .slider-dot-control label:nth-child(4), #impression #slide5:checked ~ .slider-dot-control label:nth-child(5) {
 			background: #333;
 		}
-		#program #slide1:checked ~ .slider-wrapper article:nth-child(1) .info, #program #slide2:checked ~ .slider-wrapper article:nth-child(2) .info, #program #slide3:checked ~ .slider-wrapper article:nth-child(3) .info, #program #slide4:checked ~ .slider-wrapper article:nth-child(4) .info, #program #slide5:checked ~ .slider-wrapper article:nth-child(5) .info {
+		#impression #slide1:checked ~ .slider-wrapper article:nth-child(1) .info, #impression #slide2:checked ~ .slider-wrapper article:nth-child(2) .info, #impression #slide3:checked ~ .slider-wrapper article:nth-child(3) .info, #impression #slide4:checked ~ .slider-wrapper article:nth-child(4) .info, #impression #slide5:checked ~ .slider-wrapper article:nth-child(5) .info {
 			opacity: 1;
 		}
-		#program #slide1:checked ~ .slider-wrapper .inner {
+		#impression #slide1:checked ~ .slider-wrapper .inner {
 			margin-left: 0%;
 		}
-		#program #slide2:checked ~ .slider-wrapper .inner {
+		#impression #slide2:checked ~ .slider-wrapper .inner {
 			margin-left: -100%;
 		}
-		#program #slide3:checked ~ .slider-wrapper .inner {
+		#impression #slide3:checked ~ .slider-wrapper .inner {
 			margin-left: -200%;
 		}
-		#program #slide4:checked ~ .slider-wrapper .inner {
+		#impression #slide4:checked ~ .slider-wrapper .inner {
 			margin-left: -300%;
 		}
-		#program #slide5:checked ~ .slider-wrapper .inner {
+		#impression #slide5:checked ~ .slider-wrapper .inner {
 			margin-left: -400%;
 		}
 		@media only screen and (max-width: 850px) and (min-width: 450px) {
-			#program .slider-wrapper {
+			#impression .slider-wrapper {
 				border-radius: 0;
 			}
 		}
 		@media only screen and (max-width: 450px) {
-			#program .slider-wrapper {
+			#impression .slider-wrapper {
 				border-radius: 0;
 			}
-			#program .slider-wrapper .info {
+			#impression .slider-wrapper .info {
 				opacity: 0;
 			}
 		}
 		@media only screen and (min-width: 850px) {
-			#program body {
+			#impression body {
 				padding: 0 80px;
 			}
 		}
-
-
-		/*#program .heading {grid-area:heading;}
-		#program .quote {grid-area:quote;}
-		#program .p1 {grid-area:p1;}
-		#program .p2 {grid-area:p2;}
-		#program .p3 {grid-area:p3;}
-		#program .p4 {grid-area:p4;}
-		#program .p5 {grid-area:p5;}
-		#program .p6 {grid-area:p6;}
-		#program .p7 {grid-area:p7;}
-
-		#program .quote 
-		{
-			justify-self:stretch;
-			text-align: center;
-			padding: 0px 20px;
-			line-height:24px;
-		}
-
-		#program .box 
-		{
-			justify-self:stretch;
-		}
-		#program .box ul{
-			list-style-type: none;
-			padding: 0 ;
-			padding-top :2px;
-			margin: 0;
-
-			border-radius: 100%;
-			border: 5px var(--dark-bg) solid;
-		}
-		#program .box ul li{
-			line-height: 32px;
-			vertical-align: center;
-		}     
-
-		#program .box li:not(:first-child){
-			min-height: 50px;
-			padding-left: 20px;
-		}
-		#program ul li:nth-child(odd) {
-			background-color: var(--dark-line);
-			color: var(--dark-text);
-		}
-		#program ul li:nth-child(even) {
-			background-color: var(--light-line);
-			color : var(--dark-text);
-		}
-		#program ul li:first-child {
-			
-			background-color: var(--dark-header);
-			color: var(--light-text);
-			padding-left: 10px;
-		}*/
 
 		/*Team*/
 		#team {
@@ -539,7 +500,7 @@
 		#team img{
 			margin-top: 20px;
 			border-radius: 100%;
-			width: 200px;
+			width: 300px;
 		}
 
 		#team h3{
@@ -552,10 +513,29 @@
 			padding: 20px;
 		}
 
+
+		/*Price*/
+
+		#price{
+			background-color: var(--verydark-bg);
+			color: var(--verylight-text);
+			justify-items:center;
+		}
+		#price .page{
+			display: grid;
+			grid-template:
+				"heading"
+				"price" 
+				/ 1fr;  
+		}
+
+		#price .heading {grid-area:heading;}
+		#price .price {grid-area:price;}
+
 		/*Contact*/
 
 		#contact{
-			background-color: var(--verydark-bg);
+			background-color: var(--dark-bg);
 			color: var(--verylight-text);
 			justify-items:center;
 		}
@@ -598,13 +578,13 @@
 		/* Small devices*/
 		@media only screen and (min-width: 576px) {
 
-			#program .box ul{
+			#impression .box ul{
 				border-radius: 5px;
 			}
-			#program .content ul li:first-child {
+			#impression .content ul li:first-child {
 				border-radius: 5px 5px 0px 0px;
 			}
-			#program .content ul li:last-child {
+			#impression .content ul li:last-child {
 				border-radius: 0px 0px 5px 5px;
 			}
 
@@ -622,7 +602,7 @@
 			nav {
 				grid-template: 
 					"mark menu-list" 64px
-					/ 64px 200px auto;
+					/ 210px auto;
 			}
 
 			nav .menu-list {
@@ -657,7 +637,7 @@
 			}
 
 			
-			#program {
+			#impression {
 /*        grid-template:
 					"heading heading" auto
 					"quote quote" auto
@@ -671,7 +651,7 @@
 					/ 1fr;
 			}
 
-/*      #program .box{
+/*      #impression .box{
 				margin: 0px 20px;
 				padding:0px;
 			}
@@ -701,7 +681,7 @@
 		/* Large devices*/
 		@media only screen and (min-width: 992px){
 
-/*      #program .content{
+/*      #impression .content{
 				grid-template-columns: repeat(2,1fr) ;
 			}
 */
@@ -718,7 +698,7 @@
 		/* Extra Large devices*/
 		@media only screen and (min-width: 1200px) {
 
-/*      #program .content{
+/*      #impression .content{
 				grid-template-columns: repeat(3,1fr) ;
 			}
 */
