@@ -5,7 +5,9 @@
 	<title>Einkehr Reise Kreta</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
@@ -300,6 +302,11 @@ und zu ihrer ganz besonderen Aura mit dir teilen.</p>
 		</div>
 	</footer>
 
+
+	<div id="cookieConsent">
+		This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">OK</a>
+	</div>
+
 	<script type="text/javascript">
 
 		//On Scroll Functionality
@@ -324,8 +331,17 @@ und zu ihrer ganz besonderen Aura mit dir teilen.</p>
 				$('ul').removeClass('showMenu');
 				$('.menu-toggle').removeClass('closeMenu');
 				$('.menu-list').removeClass('showMenu');
+			});
 		});
-	});
+
+		$(document).ready(function(){   
+			setTimeout(function () {
+				$("#cookieConsent").fadeIn(200);
+			}, 2000);
+			$("#closeCookieConsent, .cookieConsentOK").click(function() {
+				$("#cookieConsent").fadeOut(200);
+			}); 
+		}); 
 	</script>
 
 </body>
