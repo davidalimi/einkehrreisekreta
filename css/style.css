@@ -65,8 +65,8 @@
 			display: grid;
 			grid-template: 
 			"mark menu-toggle" 64px
-			"menu-list menu-list menu-list" 1fr
-			/ 64px auto 64px;
+			"menu-list menu-list" 1fr
+			/ auto 64px;
 
 			z-index: 1;
 
