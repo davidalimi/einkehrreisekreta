@@ -499,8 +499,9 @@
 			display: grid;
 			grid-template:
 				"heading"
-				"helga" 
 				"ulla"
+				"helga" 
+
 				/ 1fr;
 		}
 		#team .heading {grid-area:heading;}
@@ -743,7 +744,7 @@
 			#team .page{
 				grid-template:
 					"heading heading"
-					"helga ulla"
+					"ulla helga"
 					/ 1fr 1fr;
 			}
 
