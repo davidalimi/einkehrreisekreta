@@ -125,9 +125,11 @@
 					<p>Bei der Aufstellungsarbeit handelt es sich um ein therapeutisches Verfahren,
 					das Zusammenhänge innerhalb des Systems (Familie, Organisation, Beruf) mit
 					Personen darstellt, visualisiert und wiederkehrende Muster und
-					Beziehungskonstellationen transparent macht. Dies geschieht u.a. durch
+					Beziehungskonstellationen transparent macht.</p>
+					<p>Dies geschieht u.a. durch
 					Perspektivenwechsel und über die Art und Weise, wie die Beteiligten räumlich
-					und in Beziehung zu den anderen Personen positioniert sind.
+					und in Beziehung zu den anderen Personen positioniert sind.</p>
+					<p>
 					Im geschützten Raum hast du die Möglichkeit, durch die Klarheit Altes in
 					Frieden zu verabschieden, dich neuen Wegen zu öffnen und aus der stärkenden
 					Kraft der Natur zu schöpfen.</p>
@@ -291,7 +293,6 @@
 
 			<div class="box bureau">
 				<i class="fa fa-map-marker"></i>
-				<h5>Praxis</h5>
 				<p><b>Balance-Praxis</b>
 					<br><br>Gut Elsfeld, Elsfeld 1
 					<br>53639 Königswinter-Elsfeld
@@ -360,8 +361,17 @@
 			$("#closeCookieConsent, .cookieConsentOK").click(function() {
 				$("#cookieConsent").fadeOut(200);
 			}); 
-		}); 
+
+			Email.send(
+				"einkehrreisekreta@gmail.com",
+				"einkehrreisekreta@gmail.com",
+				"This is a subject",
+				"this is the body",
+				{token: "d76fbe24-9464-4fc8-b86a-388fa790e632 "});
+			}); 
 	</script>
+
+	<script type="text/javascript" src="https://smtpjs.com/v2/smtp.js"></script>
 
 </body>
 </html> 

@@ -610,17 +610,18 @@
 			border-bottom: solid 1px var(--verylight-text);
 			background: transparent;
 			color: var(--verylight-text);
-			font-size: 120%;
-			min-height: 30px;
+			font-size: 100%;
+			min-height: 15px;
 			width: 90%;
-			padding: 15px;
+			padding: 10px;
 		}
 
 		#contact .form button {
 
 			border: none;
-			margin-top: 25px;
-			font-size: 120%;
+			margin-top: 5px;
+			margin-right: 50px;
+			font-size: 100%;
 			background: transparent;
 			color:var(--light-text);
 			
@@ -744,20 +745,20 @@
 			#contact .page {	
 				grid-template:
 					"heading heading"
-					"bureau email"
-					"phone form"
+					"phone email"
+					"form bureau"
 					/ 1fr 1fr;
 			}
 
 
 			#contact .form .field {
-				height: 30px;
-				margin: 10px;
+				height: 15px;
+				margin: 5px;
 				max-width: 300px;
 			}
 
 			#contact .form .message {
-				height: 150px;
+				height: 100px;
 			}
 
 		}
@@ -778,7 +779,7 @@
 			}
 
 			#contact .form .field {
-				max-width: 500px;
+				max-width: 300px;
 			}
 		
 		}
