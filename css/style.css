@@ -561,37 +561,25 @@
 			display: grid;
 			grid-template:
 				"heading"
-				"info"
-				"panel"
+				"bureau"
+				"phone"
+				"email"
+				"form"
 				/ 1fr; 
 			justify-items:center;
 		}
 
 		#contact .heading {grid-area:heading;}
+		#contact .bureau {grid-area:bureau;}
+		#contact .email {grid-area:email;}
+		#contact .phone {grid-area:phone;}
 
-		#contact .info {	
-			grid-area:info;
-			display: grid;
-			grid-template:
-				"phone"
-				"email"
-				/ 1fr; 
-			width: 100%;
-			justify-items:center;
-		}
-
-		#contact .info .bureau {grid-area:bureau;}
-		#contact .info .email {grid-area:email;}
-
-		#contact .panel {
-			grid-area:panel;
+		#contact .form {
+			grid-area:form;
 			width: 90%;
 			margin: 0;
 			justify-items:center;
-		}
-
-		#contact .form {
-
+		
 			background: var(--dark-bg);
 			display: grid;
 			grid-template:
@@ -724,7 +712,7 @@
 					"heading heading" auto
 					"c1 c2" auto
 					"c3 c4" auto
-					"c5 ." auto
+					"c5 c6" auto
 					/ 1fr 1fr;
 			}
 
@@ -756,18 +744,11 @@
 			#contact .page {	
 				grid-template:
 					"heading heading"
-					"info panel"
+					"bureau email"
+					"phone form"
 					/ 1fr 1fr;
 			}
 
-			#contact .info {	
-				grid-area:info;
-				display: grid;
-				grid-template:
-					"phone"
-					"email"	
-					/ 1fr; 
-			}
 
 			#contact .form .field {
 				height: 30px;
