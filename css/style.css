@@ -94,7 +94,7 @@
 		nav .logo {
 			grid-area:logo;
 			cursor: pointer;
-			background-image: url("https://via.placeholder.com/64x64");
+			background-image: url("https://via.placeholder.com/64x64/415866");
 		}
 
 		nav .logo img{
@@ -368,9 +368,9 @@
 			opacity: 0;
 			color: #000;
 			text-align: left;
-			-webkit-transition: all 1000ms ease-out 600ms;
-			-moz-transition: all 1000ms ease-out 600ms;
-			transition: all 1000ms ease-out 600ms;
+			-webkit-transition: all 2000ms ease-out 600ms;
+			-moz-transition: all 2000ms ease-out 600ms;
+			transition: all 2000ms ease-out 600ms;
 		}
 		#program .info h3 {
 			color: #fcfff4;
@@ -408,9 +408,9 @@
 			-ms-transform: translateZ(0);
 			-o-transform: translateZ(0);
 			transform: translateZ(0);
-			-webkit-transition: all 500ms ease-out;
-			-moz-transition: all 500ms ease-out;
-			transition: all 500ms ease-out;
+			-webkit-transition: all 1500ms ease-out;
+			-moz-transition: all 1500ms ease-out;
+			transition: all 1500ms ease-out;
 		}
 		#program .slider-wrapper .inner {
 			-webkit-transform: translateZ(0);
