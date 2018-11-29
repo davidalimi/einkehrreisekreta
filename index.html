@@ -285,11 +285,11 @@
 
 			<h2 class="heading">Kontakt</h2>
 
-			<div class="form">
+			<form id="form-contact" class="form" onsubmit="return submitForm()">
 				<input id="form-name" class="field name" type="text" name="name" placeholder="Name" required>
 				<input id="form-email" class="field email" type="email" name="email" placeholder="Email" required>
 				<textarea id="form-msg" class="field message" name="message" placeholder="Message" required></textarea>
-				<button  class="button" type="submit" class="sendForm left" onclick="return submitForm()">Send</button>
+				<button  class="button" type="submit" class="sendForm left">Send</button>
 			</div>
 
 			<div class="box bureau">
@@ -359,13 +359,15 @@
 			
 			function cb(msg){console.log(msg)};
 
-			from = $("#form-email").val()
 			to = "einkehrreisekreta@gmail.com"
+			from = $("#form-email").val()
 			title = $("#form-name").val()
-			body = $("#form-email").val() + " : " +$("#form-msg").val() 
-
-			Email.send(from,to,"fromto",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
-			Email.send(to,from,"tofrom",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+			body = "<html><body><h3>"+$("#form-name").val()+ " - " + $("#form-email").val()  +"</h3><p>"+$("#form-msg").val() +"</p></body></html>"
+			Email.send(from,to,"einkehrreisekreta",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+			
+			title = "Einkehrreisekreta - Thanks"
+			body = "Thank you "+  $("#form-name").val() + "! We will contact you soon."
+			Email.send(to,from,title,body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
 			
 			$("#form-email").val("")
 			$("#form-name").val("")
@@ -379,6 +381,11 @@
 		}
 
 		$(document).ready(function(){   
+
+			 $("#form-contact").submit(function(e){
+        		e.preventDefault();
+    		});
+
 			setTimeout(function () {
 				$("#cookieConsent").fadeIn(200);
 			}, 2000);
