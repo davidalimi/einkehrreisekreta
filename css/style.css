@@ -81,9 +81,9 @@
 
 			display: grid;
 			grid-template: 
-			"mark menu-toggle" 64px
-			"menu-list menu-list" 1fr
-			/ auto 64px;
+			"logo mark menu-toggle" 64px
+			"menu-list menu-list menu-list" 1fr
+			/ 64px auto 64px;
 
 			z-index: 1;
 
@@ -687,8 +687,8 @@
 
 			nav {
 				grid-template: 
-					"mark menu-list" 64px
-					/ 210px auto;
+					"logo mark menu-list" 64px
+					/ 64px 210px auto;
 			}
 
 			nav .menu-list {

@@ -6,20 +6,21 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="https://smtpjs.com/v2/smtp.js"></script>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dancing+Script">
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css?v1">
+	<script type="text/javascript" src="js/einkehrreisekreta.js?v1"></script>
 
 </head>
 <body>
 	<header>
 		<nav>
-			<!-- <div class="logo"></div> -->
+			<div class="logo"></div>
 			<div class="mark"><h6>Einkehrreise Kreta</h6></div>
 			<div class="menu-toggle">
 				<i class="fa fa-bars"></i>
@@ -290,7 +291,7 @@
 				<input id="form-email" class="field email" type="email" name="email" placeholder="Email" required>
 				<textarea id="form-msg" class="field message" name="message" placeholder="Message" required></textarea>
 				<button  class="button" type="submit" class="sendForm left">Send</button>
-			</div>
+			</form>
 
 			<div class="box bureau">
 				<i class="fa fa-map-marker"></i>
@@ -330,71 +331,7 @@
 
 	<script type="text/javascript">
 
-		//On Scroll Functionality
-		$(window).on('scroll',function(){
-			if($(window).scrollTop()){
-				$('nav').addClass('black');
-			}else{
-				$('nav').removeClass('black');
-			}
-		});
-
-		//Click Logo To Scroll To Top
-		$('.logo').on('click',function(){
-			$('html,body').animate({scrollTop:0},0);
-		});
-
-		//Toggle Menu
-		$('.menu-toggle').on('click', function(){
-			$('.menu-toggle').toggleClass('closeMenu');
-			$('.menu-list').toggleClass('showMenu');
-			$('li').on('click', function(){
-				$('ul').removeClass('showMenu');
-				$('.menu-toggle').removeClass('closeMenu');
-				$('.menu-list').removeClass('showMenu');
-			});
-		});
-
-		function submitForm (){
-			
-			function cb(msg){console.log(msg)};
-
-			to = "einkehrreisekreta@gmail.com"
-			from = $("#form-email").val()
-			title = $("#form-name").val()
-			body = "<html><body><h3>"+$("#form-name").val()+ " - " + $("#form-email").val()  +"</h3><p>"+$("#form-msg").val() +"</p></body></html>"
-			Email.send(from,to,"einkehrreisekreta",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
-			
-			title = "Einkehrreisekreta - Thanks"
-			body = "Thank you "+  $("#form-name").val() + "! We will contact you soon."
-			Email.send(to,from,title,body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
-			
-			$("#form-email").val("")
-			$("#form-name").val("")
-			$("#form-msg").val("")
-
-		}
-
-
-		function sendMail(from,to,subject,body,cb){
-			
-		}
-
-		$(document).ready(function(){   
-
-			 $("#form-contact").submit(function(e){
-        		e.preventDefault();
-    		});
-
-			setTimeout(function () {
-				$("#cookieConsent").fadeIn(200);
-			}, 2000);
-			
-			$("#closeCookieConsent, .cookieConsentOK").click(function() {
-				$("#cookieConsent").fadeOut(200);
-			}); 
-	
-		}); 
+		
 	</script>
 
 	
