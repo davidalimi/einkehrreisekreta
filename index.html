@@ -285,12 +285,12 @@
 
 			<h2 class="heading">Kontakt</h2>
 
-			<form class="form">
-				<input class="field name" type="text" name="name" placeholder="Name" required>
-				<input class="field email" type="email" name="email" placeholder="Email" required>
-				<textarea class="field message" name="message" placeholder="Message" required></textarea>
-				<button  class="button" type="submit" class="sendForm left">Send</button>
-			</form>
+			<div class="form">
+				<input id="form-name" class="field name" type="text" name="name" placeholder="Name" required>
+				<input id="form-email" class="field email" type="email" name="email" placeholder="Email" required>
+				<textarea id="form-msg" class="field message" name="message" placeholder="Message" required></textarea>
+				<button  class="button" type="submit" class="sendForm left" onclick="return submitForm()">Send</button>
+			</div>
 
 			<div class="box bureau">
 				<i class="fa fa-map-marker"></i>
@@ -355,26 +355,38 @@
 			});
 		});
 
+		function submitForm (){
+			
+			function cb(msg){console.log(msg)};
+
+			from = $("#form-email").val()
+			to = "einkehrreisekreta@gmail.com"
+			title = $("#form-name").val()
+			body = $("#form-email").val() + " : " +$("#form-msg").val() 
+
+			Email.send(from,to,title,body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+			
+			$("#form-email").val("")
+			$("#form-name").val("")
+			$("#form-msg").val("")
+
+		}
+
+
+		function sendMail(from,to,subject,body,cb){
+			
+		}
+
 		$(document).ready(function(){   
 			setTimeout(function () {
 				$("#cookieConsent").fadeIn(200);
 			}, 2000);
+			
 			$("#closeCookieConsent, .cookieConsentOK").click(function() {
 				$("#cookieConsent").fadeOut(200);
 			}); 
-
-			Email.send(
-				"einkehrreisekreta@gmail.com",
-				"einkehrreisekreta@gmail.com",
-				"This is a subject",
-				"this is the body",
-				{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",
-					callback: function done(message) {console.log(message)}
-				}
-				);
-
-
-			}); 
+	
+		}); 
 	</script>
 
 	
