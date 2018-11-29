@@ -92,6 +92,7 @@
 		nav .logo {
 			grid-area:logo;
 			cursor: pointer;
+			background-image: url("https://via.placeholder.com/64x64");
 		}
 
 		nav .logo img{
