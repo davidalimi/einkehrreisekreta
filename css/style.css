@@ -276,6 +276,19 @@
 			grid-template-columns:minmax(auto,400px);
 			justify-content:center;
 			justify-self:center;
+
+			overflow: hidden;
+
+			-moz-transition: all 0.5s ease-out;
+			-webkit-transition: all 0.5s ease-out;;
+			transition: all 0.5s ease-out;;
+
+		}
+
+		#concept .box-concept:hover{
+			-moz-transform: scale(1.05);
+			-webkit-transform: scale(1.05);
+			transform: scale(1.05);
 		}
 
 		/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
