@@ -364,7 +364,8 @@
 			title = $("#form-name").val()
 			body = $("#form-email").val() + " : " +$("#form-msg").val() 
 
-			Email.send(from,to,title,body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+			Email.send(from,to,"fromto",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+			Email.send(to,from,"tofrom",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
 			
 			$("#form-email").val("")
 			$("#form-name").val("")
