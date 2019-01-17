@@ -27,15 +27,15 @@ function submitForm (){
 	
 	function cb(msg){console.log(msg)};
 
-	to = "einkehrreisekreta@gmail.com"
+	to = "info@einkehrreise-kreta.de"
 	from = $("#form-email").val()
 	title = $("#form-name").val()
 	body = "<html><body><h3>"+$("#form-name").val()+ " - " + $("#form-email").val()  +"</h3><p>"+$("#form-msg").val() +"</p></body></html>"
-	Email.send(from,to,"einkehrreisekreta",body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+	Email.send(from,to,"einkehrreisekreta",body,{token: "ee5ca163-1964-4b0c-ad2c-d5da7c8624fd",callback: cb});
 	
-	title = "Einkehrreisekreta - Thanks"
+	title = "Einkehrreise-Kreta"
 	body = "Thank you "+  $("#form-name").val() + "! We will contact you soon."
-	Email.send(to,from,title,body,{token: "e35b8d5f-252e-4236-a5b8-418afb0aecbc",callback: cb});
+	Email.send(to,from,title,body,{token: "ee5ca163-1964-4b0c-ad2c-d5da7c8624fd",callback: cb});
 	
 	$("#form-email").val("")
 	$("#form-name").val("")
