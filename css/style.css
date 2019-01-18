@@ -631,11 +631,11 @@
 			background: var(--dark-bg);
 			display: grid;
 			grid-template:
-				"name"
-				"email"
-				"message"
-				"button"
-				/ 1fr; 
+				"name name"
+				"email email "
+				"message message"
+				"check button"
+				/ 1fr 1fr; 
 
 			position: relative;
 			padding:5px;
@@ -647,6 +647,7 @@
 		#contact .form .name {grid-area:name;}
 		#contact .form .email {grid-area:email;}
 		#contact .form .message {grid-area:message;}
+		#contact .form .check {grid-area:check;justify-self: end;}
 		#contact .form .button {grid-area:button; justify-self: end;}
 
 		#contact .form textarea {
