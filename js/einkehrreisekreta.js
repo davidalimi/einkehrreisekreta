@@ -33,8 +33,13 @@ function submitForm (){
 	body = "<html><body><h3>"+$("#form-name").val()+ " - " + $("#form-email").val()  +"</h3><p>"+$("#form-msg").val() +"</p></body></html>"
 	Email.send(from,to,"einkehrreisekreta",body,{token: "ee5ca163-1964-4b0c-ad2c-d5da7c8624fd",callback: cb});
 	
-	title = "Einkehrreise-Kreta"
-	body = "Thank you "+  $("#form-name").val() + "! We will contact you soon."
+	title = "Einkehrreise-Kreta - 7 Tage Einkehrreise für Frauen"
+	body = "<html>
+	<body><p>Herzlichen Dank <b>"+  $("#form-name").val() + "<b> für dein Interesse an unserem Angebot der 7 Tage Einkehrreise für Frauen auf Kreta.</p>
+	<p>Wir werden deine Anfrage schnellmöglich beantworten!</p>
+<p>Herzliche Grüße</p>
+<p>Das Team der Einkehrreise-Kreta<br>
+Susanne Prinz & Helga de Bresser</p></body></html>"
 	Email.send(to,from,title,body,{token: "ee5ca163-1964-4b0c-ad2c-d5da7c8624fd",callback: cb});
 	
 	$("#form-email").val("")
