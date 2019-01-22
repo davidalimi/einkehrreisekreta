@@ -29,9 +29,9 @@ function submitForm (){
 
 	to = "info@einkehrreise-kreta.de"
 	from = $("#form-email").val()
-	title = $("#form-name").val()
-	body = "<html><body><h3>"+$("#form-name").val()+ " - " + $("#form-email").val()  +"</h3><p>"+$("#form-msg").val() +"</p></body></html>"
-	Email.send(from,to,"einkehrreisekreta",body,{token: "ee5ca163-1964-4b0c-ad2c-d5da7c8624fd",callback: cb});
+	title = "Anmeldung"
+	body = "<html><body><h3>Name :"+$("#form-name").val()+ "</h3><p>Email:" + $("#form-email").val()  +"</p><p>Message:"+$("#form-msg").val() +"</p></body></html>"
+	Email.send(from,to,title,body,{token: "ee5ca163-1964-4b0c-ad2c-d5da7c8624fd",callback: cb});
 	
 	title = "Einkehrreise-Kreta - 7 Tage Einkehrreise für Frauen"
 	body = `
