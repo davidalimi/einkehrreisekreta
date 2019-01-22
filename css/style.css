@@ -379,7 +379,7 @@
 			font-style: italic;
 			line-height: 20px;
 			opacity: 1;
-			color: #fff;
+			color: var(--light-text);
 			text-align: left;
 			max-width: 66%;
 			-webkit-transition: all 5000ms ease-out 1000ms;
@@ -394,8 +394,9 @@
 			font-style: normal;
 		}
 
-		#program .p3{
-			color: black;
+		#program .info mark{
+			background: var(--dark-bg);
+			color: var(--light-text);
 		}
 
 		#program .info.top-left {
