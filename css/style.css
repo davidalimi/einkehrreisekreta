@@ -377,11 +377,12 @@
 		#program .info {
 			position: absolute;
 			font-style: italic;
-			line-height: 20px;
+			line-height: 30px;
 			opacity: 1;
+			font-size: 120%;
 			color: var(--light-text);
 			text-align: left;
-			max-width: 66%;
+			max-width: 100%;
 			-webkit-transition: all 5000ms ease-out 1000ms;
 			-moz-transition: all 5000ms ease-out 1000ms;
 			transition: all 5000ms ease-out 1000ms;
@@ -551,14 +552,14 @@
 			display: grid;
 			grid-template:
 				"heading"
-				"ulla"
-				"helga" 
+				"t1"
+				"t2" 
 
 				/ 1fr;
 		}
 		#team .heading {grid-area:heading;}
-		#team .helga {grid-area:helga;}
-		#team .ulla {grid-area:ulla;}
+		#team .t1 {grid-area:t1;}
+		#team .t2 {grid-area:t2;}
 
 		#team .box {
 			padding: 10px;
@@ -792,7 +793,7 @@
 			#team .page{
 				grid-template:
 					"heading heading"
-					"ulla helga"
+					"t1 t2"
 					/ 1fr 1fr;
 			}
 
