@@ -37,7 +37,7 @@ function submitForm (){
 	body = `
 	<html>
 	<body><p>Herzlichen Dank für dein Interesse an unserem Angebot der 7 Tage Einkehrreise für Frauen auf Kreta.</p>
-	<p>Wir werden deine Anfrage schnellmöglich beantworten!</p>
+	<p>Wir werden deine Anfrage schnellst möglich beantworten!</p>
 	<p>Herzliche Grüße</p>
 	<p>Das Team der Einkehrreise-Kreta<br>
 	Susanne Prinz & Helga de Bresser</p>
