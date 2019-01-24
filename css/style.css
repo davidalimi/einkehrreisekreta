@@ -94,7 +94,8 @@
 		nav .logo {
 			grid-area:logo;
 			cursor: pointer;
-			background-image: url("https://via.placeholder.com/64x64/415866");
+			background-image: url("../image/logo.jpg");
+
 		}
 
 		nav .logo img{
@@ -213,6 +214,12 @@
 			grid-area:presentation;
 			display: grid;
 			padding: 0 20px;
+		}
+
+		#home .map{
+			max-width: 20%;
+			margin-left: auto;
+ 			margin-right: auto;
 		}
 
 		#home strong{
